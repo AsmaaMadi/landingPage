@@ -14,7 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-//Route::resource('doctor', 'DoctorController');
+Route::resource('doctor', 'DoctorController');
 Route::post('registerdoctor','DoctorController@store');
 Route::post('registerpatient','PatientController@store');
 /*use App\Doctor;
