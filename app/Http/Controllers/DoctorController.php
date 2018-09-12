@@ -46,13 +46,13 @@ class DoctorController extends Controller
             'firstname','lastname', 'email', 'phone','clinicName','city','gender','certificate_file','age'
         ]));
         $doctor->save();
-
+/*
         $certificate = new \App\Certificate();
         $certificate->fill($request->only([
             'degree','graduationYear', 'universityName',
         ]));
         $certificate->doctor_id = $doctor->id;
-        $doctor->certificate()->save($certificate);
+        $doctor->certificate()->save($certificate);*/
 
         return new DoctorResource($doctor);
     }
