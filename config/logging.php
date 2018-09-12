@@ -34,13 +34,14 @@ return [
     */
 
     'channels' => [
+        'default' => env('LOG_CHANNEL', 'stack'),
         'stack' => [
             'driver' => 'stack',
             'channels' => ['single'],
         ],
 
         'single' => [
-            'driver' => 'single',
+            'driver' => 'errorlog',
             'path' => storage_path('logs/laravel.log'),
             'level' => 'debug',
         ],
